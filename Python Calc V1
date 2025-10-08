@@ -31,4 +31,6 @@ elif operation == "%":
 else:
     print("Error: Invalid operation.")
     exit()
+
 print(f"{num1} {op_symbol
+
