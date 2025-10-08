@@ -1,12 +1,34 @@
-from calc_core import evaluate_expression
+num1 = float(input("Enter first number: "))
+operation = input("Enter operation (+, -, *, /, %, **): ")
+num2 = float(input("Enter second number: "))
 
-num1 = input("Enter first number: ")
-operation = input("Enter operation (+, -, *, /, %, **, ^): ")
-num2 = input("Enter second number: ")
-
-ok, message = evaluate_expression(num1, num2, operation)
-if ok:
-    print(message)
+if operation == "+":
+    total_sum = num1 + num2
+    op_symbol = "+"
+elif operation == "-":
+    total_sum = num1 - num2
+    op_symbol = "-"
+elif operation == "*":
+    total_sum = num1 * num2
+    op_symbol = "*"
+elif operation == "/":
+    if num2 != 0:
+        total_sum = num1 / num2
+        op_symbol = "/"
+    else:
+        print("Error: Division by zero is not allowed.")
+        exit()
+elif operation == "**":
+    total_sum = num1 ** num2
+    op_symbol = "**"
+elif operation == "%":
+    if num2 != 0:
+        total_sum = num1 % num2
+        op_symbol = "%"
+    else:
+        print("Error: Finding the modulus with zero is not allowed .")
+        exit()
 else:
-    print(message)
-    exit(1)
+    print("Error: Invalid operation.")
+    exit()
+print(f"{num1} {op_symbol
