@@ -1,0 +1,12 @@
+from calc_core import evaluate_expression
+
+num1 = input("Enter first number: ")
+operation = input("Enter operation (+, -, *, /, %, **, ^): ")
+num2 = input("Enter second number: ")
+
+ok, message = evaluate_expression(num1, num2, operation)
+if ok:
+    print(message)
+else:
+    print(message)
+    exit(1)
